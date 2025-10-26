@@ -1,0 +1,196 @@
+            <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+   <script
+      type="text/javascript"
+      src="https://unpkg.com/parse/dist/parse.min.js"
+    ></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Bora Lá</title>
+   <script
+      type="text/javascript"
+      src="https://unpkg.com/parse/dist/parse.min.js"
+    ></script>
+
+    <!-- Vincula o arquivo JavaScript externo -->
+    <script src="back4app.js" defer></script>
+
+  <style>
+    body {
+      font-size: 12px;
+
+      font-weight: bold;
+
+      color: #d289d6;
+
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+      margin-top: 10px;
+
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #924a90;
+      flex-wrap: wrap;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-buttons button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-buttons button:hover {
+      background-color: white;
+      color: #924a90;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      background-color: #d4957e;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #b77960;
+    }
+   .form-container {
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+#messageBox {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  font-weight: bold;
+}
+
+.message-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bora Lá - Cadastro</h1>
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Início</button>
+      <button onclick="window.location.href='europa.html'">Europa</button>
+      <button onclick="window.location.href='asia.html'">Ásia</button>
+      <button onclick="window.location.href='america-oceania.html'">América e Oceania</button>
+      <button onclick="window.location.href='africa.html'">África</button>
+    </div>
+     <div class="form-container">
+  <h2>Criar Conta</h2>
+
+  <input type="text" id="username" placeholder="Nome de usuário" />
+  <input type="email" id="email" placeholder="E-mail" />
+  <input type="password" id="password" placeholder="Senha" />
+  
+  <button id="createButton">Cadastrar</button>
+
+  <!-- Mensagens -->
+  <div id="messageBox"></div>
+</div>
+
+  </header>
+
+  </script>
+  </head>
+  <body>
+   </body>
+</html>

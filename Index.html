@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bora La</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #924a90;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #924a90;
+      flex-wrap: wrap;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-buttons button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-buttons button:hover {
+      background-color: white;
+      color: #924a90;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #d289d6;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      margin-top: 10px;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      color: #d289d6;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    .festival {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .festival h3 {
+      margin-top: 0;
+    }
+
+    .flag {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    img.flag-img {
+      width: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-buttons">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='contato.html'"">Contato</button>
+      <button onclick="location.href='europa.html'">Europa</button>
+      <button onclick="location.href='america-oceania.html'">America e Oceania</button>
+      <button onclick="location.href='asia.html'">Asia</button>
+      <button onclick="location.href='africa.html'">Africa</button>
+    </div>
+
+    <div class="logo">Bora La</div>
+  </header>
+
+  <main>
+    <section>
+      <h1>Bem-vindo ao Bora La! 💜✈</h1>
+      <p>
+        Seu proximo destino comeca aqui — com um toque de roxo e muita vontade de explorar o mundo!
+        O Bora La e mais do que um site de viagens: e um convite para descobrir novos lugares,
+        culturas, sabores e experiencias inesqueciveis. Inspirado na cor roxa (bora, em coreano),
+        que simboliza criatividade, inspiracao e transformacao, nosso nome e um trocadilho que
+        celebra o espirito aventureiro com uma pitada de originalidade.
+      </p>
+      <p>
+        Seja para aquela escapada de fim de semana, uma viagem dos sonhos ou um mochilao pelo mundo,
+        bora planejar, bora sonhar, Bora La!
+      </p>
+    </section>
+
+    <section>
+      <h2> Festivais de Junho</h2>
+
+      <div class="festival">
+        <img
+          src="https://i.pinimg.com/736x/ab/a1/d0/aba1d0c0115a70a7493c25cb269bdf0e.jpg"
+          alt="Bandeira de Portugal"
+          class="flag-img"
+        />
+        <h3><span class="flag">🇵🇹</span>Sao Joao em Portugal: uma festa que vai ficar na memoria!</h3>
+        <p>
+          Em Portugal, especialmente no Porto, o Sao Joao e uma das festas mais animadas.
+          Na noite de 23 para 24 de junho, as ruas ganham baloes, sardinhas assadas,
+          e martelinhos de plastico — em um clima de pura alegria!
+        </p>
+        <p>
+          O ponto alto? Uma queima de fogos espetacular a meia-noite sobre o rio Douro.
+        </p>
+        <p><strong>Dica:</strong> Chegue cedo, explore os bairros ribeirinhos e viva a experiencia como um local.</p>
+      </div>
+
+      <div class="festival">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0aWcrT8YpTVh3UVDU6IGgMv8JaTQGK7fbfw&s"
+          alt="Bandeira da Suecia"
+          class="flag-img"
+        />
+        <h3><span class="flag">🇸🇪</span>Midsommar na Suecia: o verao celebrado em grande estilo!</h3>
+        <p>
+          No solsticio de verao (junho), os suecos dançam em volta do <em>midsommarstang</em>,
+          usam coroas florais e compartilham comidas tipicas. Uma celebracao da luz, natureza e tradicao!
+        </p>
+        <p>Nao e apenas um feriado — e uma conexao com a alma sueca.</p>
+      </div>
+
+      <div class="festival">
+        <img
+          src="https://www.vocepodefalaringles.com.br/wp-content/uploads/2021/02/bandeira-dos-estados-unidos-da-america.jpg"
+          alt="Bandeira dos EUA"
+          class="flag-img"
+        />
+        <h3><span class="flag">🇺🇸</span>Festival de Jazz nos EUA: onde a musica conta historias!</h3>
+        <p>
+          De Nova Orleans a Newport, os festivais de jazz celebram a liberdade e a emocao dessa musica.
+          Entre improvisos, gastronomia e cultura local, o jazz ganha vida.
+        </p>
+        <p><strong>Dica:</strong> programe-se com antecedencia — os ingressos voam!</p>
+      </div>
+    </section>
+  </main>
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+<script src="js/back4app.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

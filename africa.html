@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Africa - Bora La</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #924a90;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #924a90;
+      flex-wrap: wrap;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-buttons button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-buttons button:hover {
+      background-color: white;
+      color: #924a90;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #d289d6;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      color: #d289d6;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .carousel-item {
+      display: none;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .carousel-buttons button:hover {
+      background-color: white;
+      color: #924a90;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-buttons">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='contato.html'">Contato</button> <button onclick="location.href='europa.html'">Europa</button>
+      <button onclick="location.href='america-oceania.html'">America e Oceania</button>
+      <button onclick="location.href='asia.html'">Asia</button>
+      <button onclick="location.href='africa.html'">Africa</button>
+    </div>
+
+    <div class="logo">Bora La</div>
+  </header>
+
+  <main>
+    <h1>🌍 Explorando a Africa</h1> <p>
+      Descubra alguns dos destinos mais iconicos do continente africano. Clique nas setas
+      para conhecer paises e seus pontos turisticos mais emblematicos.
+    </p>
+    <div class="nav-buttons">
+    <div class="carousel">
+      <div class="carousel-item active">
+        <h2>Parque Nacional de Kruger</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGC_niav4uVJ_O89BrtMvKHFCZ4weY9D5AhA&s" alt="Africa">
+        <h3>Parque Nacional de Kruger</h3>
+        <p>
+          O Parque Nacional Kruger, no nordeste da Africa do Sul, e uma das maiores reservas
+          de caça do continente. A elevada densidade de animais selvagens inclui os "Big 5":
+          leoes, leopardos, rinocerontes, elefantes e bufalos. Centenas de outros mamiferos
+          vivem na regiao, tal como varias especies de aves, como abutres, aguias e cegonhas.
+          Montanhas, planicies arborizadas e florestas tropicais completam a paisagem.
+        </p>
+      </div>
+
+      <div class="carousel-item">
+        <h2>Boulders Beach</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Boulders_Beach_Suedafrika.jpg" alt="Boulders Beach Africa">
+        <h3>South Africa</h3>
+        <p>
+          Boulders Beach e uma praia abrigada composta por pequenas enseadas entre rochedos de granito.
+          Fica na Baia Falsa, costa leste da Peninsula do Cabo, entre Simon's Town e a Ponta do Cabo,
+          perto da Cidade do Cabo na Provincia do Cabo Ocidental, Africa do Sul.
+        </p>
+      </div>
+
+      <div class="carousel-buttons">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let currentSlide = 0;
+    const items = document.querySelectorAll('.carousel-item');
+
+    function showSlide(index) {
+      items.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % items.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + items.length) % items.length;
+      showSlide(currentSlide);
+    }
+  </script>
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+<script src="js/back4app.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
